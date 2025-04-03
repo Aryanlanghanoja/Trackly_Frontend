@@ -12,6 +12,7 @@ import Leads from "./pages/Leads";
 import Customers from "./pages/Customers";
 import Login from "./pages/Login";
 import Registration from "./pages/Registration";
+import Calendar from "./pages/Calendar";
 
 const queryClient = new QueryClient();
 
@@ -30,6 +31,7 @@ const App = () => (
             <Route path="/profile" element={<Profile />} />
             <Route path="/leads" element={<Leads />} />
             <Route path="/customers" element={<Customers />} /> 
+            <Route path="/calendar" element={<Calendar />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           </Route>
           <Route path="*" element={<NotFound />} />
