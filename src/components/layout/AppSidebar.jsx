@@ -23,14 +23,16 @@ const settingsItems = [
   { title: "Log out", url: "/help", icon: LogOut },
 ];
 
+// ... imports remain the same ...
+
 const AppSidebar = () => {
   const location = useLocation();
 
   return (
-    <div className="bg-gradient-to-b from-gray-900 to-gray-800 text-gray-200 shadow-lg w-64">
+    <div className="bg-[#003B7A] text-gray-200 shadow-lg w-64 flex flex-col h-screen">
       {/* Header */}
-      <div className="py-8 px-6 border-b border-gray-700 text-center">
-        <span className="relative text-2xl font-extrabold uppercase bg-gradient-to-r from-orange-500 via-orange-300 to-yellow-300 bg-clip-text text-transparent tracking-wider">
+      <div className="py-8 px-6 border-b border-[#002d5d] text-center">
+        <span className="relative text-2xl font-extrabold uppercase bg-orange-500 bg-clip-text text-transparent tracking-wider">
           Griwa International
         </span>
       </div>
@@ -38,7 +40,7 @@ const AppSidebar = () => {
       {/* Sidebar Content */}
       <div className="flex-1 py-6 overflow-y-auto">
         {/* Main Menu */}
-        <div className="px-6 mb-4 text-gray-400 uppercase tracking-wide text-xs font-semibold">Main Menu</div>
+        <div className="px-6 mb-4 text-gray-300 uppercase tracking-wide text-xs font-semibold">Main Menu</div>
         <nav className="space-y-1 px-3">
           {menuItems.map((item) => (
             <Link
@@ -47,7 +49,7 @@ const AppSidebar = () => {
               className={`flex items-center gap-3 px-4 py-3 rounded-md transition-all duration-200 ${
                 location.pathname === item.url
                   ? 'bg-orange-500 text-white shadow-md'
-                  : 'hover:bg-gray-700 hover:text-white'
+                  : 'hover:bg-[#004c99] hover:text-white'
               }`}
             >
               <item.icon className="w-5 h-5" />
@@ -57,7 +59,7 @@ const AppSidebar = () => {
         </nav>
 
         {/* Support Section */}
-        <div className="px-6 mt-8 mb-4 text-gray-400 uppercase tracking-wide text-xs font-semibold">Support</div>
+        <div className="px-6 mt-8 mb-4 text-gray-300 uppercase tracking-wide text-xs font-semibold">Support</div>
         <nav className="space-y-1 px-3">
           {settingsItems.map((item) => (
             <Link
@@ -65,8 +67,8 @@ const AppSidebar = () => {
               to={item.url}
               className={`flex items-center gap-3 px-4 py-3 rounded-md transition-all duration-200 ${
                 location.pathname === item.url
-                  ? 'bg-blue-500 text-white shadow-md'
-                  : 'hover:bg-gray-700 hover:text-white'
+                  ? 'bg-orange-500 text-white shadow-md'
+                  : 'hover:bg-[#004c99] hover:text-white'
               }`}
             >
               <item.icon className="w-5 h-5" />
@@ -77,11 +79,13 @@ const AppSidebar = () => {
       </div>
 
       {/* Footer */}
-      <div className="bg-gray-900 py-4 px-6 border-t border-gray-800 text-center text-xs text-gray-400">
+      <div className="bg-[#003366] py-4 px-6 border-t border-[#002d5d] text-center text-xs text-gray-300 font-bold mt-auto">
         Griwa International © {new Date().getFullYear()}
       </div>
     </div>
   );
 };
+
+// ... export remains the same ...
 
 export default AppSidebar;
