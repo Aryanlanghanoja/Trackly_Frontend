@@ -14,7 +14,7 @@ const Profile = () => {
     email: "narendra.modi@gov.in",
     role: "Prime Minister",
     company: "India",
-    bio: "Prime Minister of India Since 2004",
+    bio: "Prime Minister of India Since 2014",
     location: "Prime Minister Office, New Delhi",
     website: "https://www.narendramodi.in/",
   });
